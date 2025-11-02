@@ -170,13 +170,14 @@ const HomePage = () => {
               </div>
               <div>
                 <h1 className="text-xl font-bold text-treasure">Radiant Arrow Inc.</h1>
-                <p className="text-xs text-gray-600">CORPORATE & RECRUITING SITE</p>
+                <p className="text-xs text-gray-600">CORPORATE SITE</p>
               </div>
             </div>
             
             {/* Desktop Navigation with CTA buttons */}
             <div className="hidden md:flex items-center space-x-4">
-              <Button 
+              {/* TODO: 実装後回し - ボタンを有効化する */}
+              {/* <Button 
                 variant="default" 
                 className="treasure-orange-bg hover:opacity-90 text-white font-medium px-6"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
@@ -189,7 +190,7 @@ const HomePage = () => {
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 AI 技術者募集
-              </Button>
+              </Button> */}
               <button 
                 className="md:hidden"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -211,7 +212,8 @@ const HomePage = () => {
           {isMenuOpen && (
             <nav className="md:hidden mt-4 pb-4 border-t border-gray-100 pt-4">
               <div className="flex flex-col space-y-3">
-                <Button 
+                {/* TODO: 実装後回し - ボタンを有効化する */}
+                {/* <Button 
                   variant="default" 
                   className="treasure-orange-bg hover:opacity-90 text-white font-medium w-full"
                   onClick={() => { document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); setIsMenuOpen(false); }}
@@ -224,7 +226,7 @@ const HomePage = () => {
                   onClick={() => { document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); setIsMenuOpen(false); }}
                 >
                   AI 技術者募集
-                </Button>
+                </Button> */}
               </div>
             </nav>
           )}
@@ -243,8 +245,7 @@ const HomePage = () => {
                   導く未来。
                 </h1>
                 <p className="text-xl lg:text-2xl opacity-90">
-                  AI × SES で<br />
-                  エンジニアの価値を最大化
+                  私達は"人"の価値を最大化します
                 </p>
                 <div className="pt-4">
                   <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
@@ -269,7 +270,7 @@ const HomePage = () => {
                 </div>
                 
                 <h2 className="text-2xl lg:text-3xl font-bold">
-                  エンジニア一人ひとりの<br />
+                  一人ひとりの<br />
                   キャリアを光で照らし、<br />
                   未来へ導く会社
                 </h2>
@@ -295,11 +296,9 @@ const HomePage = () => {
       {/* Keep on smiling section - Centered content */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">Keep on smiling</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6">Keep evolving</h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            私たちラディアントアロー株式会社は、「エンジニアにとって正しい環境をつくる」という理念のもと、
-            AI技術とSES事業を融合させた新しい形の企業として、エンジニア一人ひとりが笑顔で働ける環境を提供しています。
-            光（Radiant）は透明性を、矢（Arrow）は成長を表し、あなたのキャリアを明るい未来へと導きます。
+            ラディアントアローは、 "技術者が時代に置いていかれない会社" でありたいと考えています。 AIやクラウドなどの新しい技術が次々と登場し、 エンジニアに求められるスキルや働き方も日々変化しています。 だからこそ私たちは、AI時代でも安心して成長できる環境をつくることを使命にしています。
           </p>
         </div>
       </section>
@@ -312,10 +311,7 @@ const HomePage = () => {
             <div className="text-white space-y-6">
               <h2 className="text-4xl font-bold">COMPANY</h2>
               <p className="text-xl leading-relaxed">
-                多様性を重視し、エンジニア一人ひとりの<br />
-                個性と技術力を大切にする企業文化。<br />
-                透明性の高い経営と、社員の成長を<br />
-                第一に考える組織づくりを実践しています。
+                私たちが目指すのは、トレンドを追うだけの組織ではなく、 AIや新技術を使いこなし、形にできるチーム。 そのために、私自身も現場に立ちながら、 常に"時代の先端を走り続ける"チームづくりに挑んでいます。
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
@@ -333,28 +329,26 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <div className="bg-white flex items-center justify-center p-8 lg:p-16">
-            <div className="text-center">
-              <Building className="w-32 h-32 mx-auto text-gray-300 mb-6" />
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">企業理念</h3>
-              <p className="text-gray-600">
-                光＝透明性 / Arrow＝成長<br />
-                エンジニアにとって正しい環境をつくる
-              </p>
+          <div className="bg-white flex items-center justify-center">
+            <div className="w-full h-full flex items-center justify-center">
+              <img 
+                src="/images/corporate-philosophy.png" 
+                alt="企業理念 - Transparency & Growth - エンジニアにとって正しい環境をつくる"
+                className="w-full h-auto max-w-full object-contain"
+              />
             </div>
           </div>
         </div>
 
         {/* BUSINESS Section */}
         <div className="grid lg:grid-cols-2 min-h-[60vh]">
-          <div className="bg-white flex items-center justify-center p-8 lg:p-16 order-2 lg:order-1">
-            <div className="text-center">
-              <Briefcase className="w-32 h-32 mx-auto text-gray-300 mb-6" />
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">事業内容</h3>
-              <p className="text-gray-600">
-                AI開発支援・SES事業・<br />
-                AI導入コンサルティング
-              </p>
+          <div className="bg-white flex items-center justify-center order-2 lg:order-1">
+            <div className="w-full h-full flex items-center justify-center">
+              <img 
+                src="/images/business content.png" 
+                alt="事業内容 - AI開発支援・SES事業・AI導入コンサルティング"
+                className="w-full h-auto max-w-full object-contain"
+              />
             </div>
           </div>
           <div className="business-blue-bg flex items-center justify-center p-8 lg:p-16 order-1 lg:order-2">
@@ -383,9 +377,47 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+      </section>
 
-        {/* RECRUIT Section */}
-        <div className="grid lg:grid-cols-2 min-h-[60vh]">
+      {/* Company Overview Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-center">会社概要</h2>
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+              <table className="w-full border-collapse">
+                <tbody>
+                  <tr className="border-b border-gray-200">
+                    <td className="px-6 py-4 font-bold text-gray-800 border-r border-gray-200 w-1/3">会社名</td>
+                    <td className="px-6 py-4 text-gray-700">ラディアントアロー株式会社</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="px-6 py-4 font-bold text-gray-800 border-r border-gray-200 w-1/3">所在地</td>
+                    <td className="px-6 py-4 text-gray-700">大阪府堺市美原区南余部297-9</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="px-6 py-4 font-bold text-gray-800 border-r border-gray-200 w-1/3">法人番号</td>
+                    <td className="px-6 py-4 text-gray-700">3120101070068</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="px-6 py-4 font-bold text-gray-800 border-r border-gray-200 w-1/3">適格請求書発行事業者登録番号</td>
+                    <td className="px-6 py-4 text-gray-700">T3120101070068</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 font-bold text-gray-800 border-r border-gray-200 w-1/3">役員</td>
+                    <td className="px-6 py-4 text-gray-700">清水 了</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Three main sections - COMPANY, BUSINESS, RECRUIT */}
+      <section className="space-y-0">
+        {/* TODO: 実装後回し - RECRUIT Section */}
+        {/* <div className="grid lg:grid-cols-2 min-h-[60vh]">
           <div className="recruit-green-bg flex items-center justify-center p-8 lg:p-16">
             <div className="text-white space-y-6">
               <h2 className="text-4xl font-bold">RECRUIT</h2>
@@ -421,11 +453,11 @@ const HomePage = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
 
-      {/* Interview Section */}
-      <section className="py-20 bg-gray-50">
+      {/* TODO: 実装後回し - Interview Section */}
+      {/* <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">INTERVIEW</h2>
@@ -453,10 +485,10 @@ const HomePage = () => {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* News Section */}
-      <section className="py-20 bg-white">
+      {/* TODO: 実装後回し - News Section */}
+      {/* <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">NEWS</h2>
@@ -465,7 +497,6 @@ const HomePage = () => {
             </p>
           </div>
 
-          {/* News category filters */}
           <div className="flex flex-wrap justify-center gap-2 mb-8">
             {newsCategories.map((category) => (
               <button
@@ -482,7 +513,6 @@ const HomePage = () => {
             ))}
           </div>
 
-          {/* News list */}
           <div className="max-w-4xl mx-auto space-y-4 mb-12">
             {filteredNews.map((news, index) => (
               <div key={index} className="flex items-center space-x-4 p-4 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer">
@@ -512,10 +542,10 @@ const HomePage = () => {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Statistics Section */}
-      <section id="stats-section" className="py-20 bg-gray-50">
+      {/* TODO: 実装後回し - Statistics Section */}
+      {/* <section id="stats-section" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">数字で見るラディアントアロー</h2>
@@ -576,10 +606,10 @@ const HomePage = () => {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Final Recruitment CTA with background image */}
-      <section className="py-20 relative">
+      {/* TODO: 実装後回し - Final Recruitment CTA with background image */}
+      {/* <section className="py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-purple-900/90"></div>
         <div className="relative container mx-auto px-4 text-center text-white">
           <div className="max-w-4xl mx-auto space-y-8">
@@ -626,10 +656,10 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
+      {/* TODO: 実装後回し - Contact Section */}
+      {/* <section id="contact" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">お問い合わせ・エントリー</h2>
@@ -639,7 +669,6 @@ const HomePage = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <CardTitle>お問い合わせフォーム</CardTitle>
@@ -690,7 +719,6 @@ const HomePage = () => {
               </CardContent>
             </Card>
 
-            {/* Recruitment Entry */}
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <CardTitle>エンジニア採用エントリー</CardTitle>
@@ -751,7 +779,7 @@ const HomePage = () => {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer - Treasure.inc style */}
       <footer className="bg-gray-900 text-white py-12">
@@ -768,7 +796,7 @@ const HomePage = () => {
                 </div>
               </div>
               <p className="text-gray-400 text-sm">
-                エンジニア一人ひとりのキャリアを光で照らし、未来へ導く会社です。
+                一人ひとりのキャリアを光で照らし、未来へ導く会社です。
               </p>
             </div>
             
@@ -776,7 +804,7 @@ const HomePage = () => {
               <h4 className="font-bold mb-4">COMPANY</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li><a href="#" className="hover:text-white transition-colors">企業情報</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">代表挨拶</a></li>
+                {/* <li><a href="#" className="hover:text-white transition-colors">代表挨拶</a></li> */}
                 <li><a href="#" className="hover:text-white transition-colors">企業理念</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">会社概要</a></li>
               </ul>
@@ -785,14 +813,15 @@ const HomePage = () => {
             <div>
               <h4 className="font-bold mb-4">BUSINESS</h4>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">事業内容</a></li>
+                {/* <li><a href="#" className="hover:text-white transition-colors">事業内容</a></li> */}
                 <li><a href="#" className="hover:text-white transition-colors">AI開発支援</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">SES事業</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">コンサルティング</a></li>
               </ul>
             </div>
             
-            <div>
+            {/* TODO: 実装後回し - RECRUIT Section in Footer */}
+            {/* <div>
               <h4 className="font-bold mb-4">RECRUIT</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li><a href="#" className="hover:text-white transition-colors">働く環境</a></li>
@@ -800,7 +829,7 @@ const HomePage = () => {
                 <li><a href="#contact" className="hover:text-white transition-colors">エントリー</a></li>
                 <li><a href="#contact" className="hover:text-white transition-colors">お問い合わせ</a></li>
               </ul>
-            </div>
+            </div> */}
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
