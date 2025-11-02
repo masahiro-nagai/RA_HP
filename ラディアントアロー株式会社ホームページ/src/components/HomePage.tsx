@@ -836,11 +836,12 @@ const HomePage = () => {
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
               Copyright © 2024 Radiant Arrow Inc. All rights reserved.
             </p>
-            <div className="flex space-x-4 text-sm text-gray-400">
+            {/* TODO: 実装後回し - Footer links */}
+            {/* <div className="flex space-x-4 text-sm text-gray-400">
               <a href="#" className="hover:text-white transition-colors">ニュース</a>
               <a href="#contact" className="hover:text-white transition-colors">お問い合わせ</a>
               <a href="#" className="hover:text-white transition-colors">パートナー企業専用サイト</a>
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>
