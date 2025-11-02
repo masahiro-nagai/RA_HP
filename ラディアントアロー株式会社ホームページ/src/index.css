@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Radiant Arrow Design System - AI×SES企業のブランドカラー */
+
+@layer base {
+  :root {
+    /* Treasure.inc inspired colors - Orange/Gold main theme */
+    --treasure-orange: 30 100% 50%; /* #FF9900 - Main brand color */
+    --company-red: 0 65% 55%; /* #D44949 - Company section */
+    --business-blue: 200 100% 30%; /* #006699 - Business section */
+    --recruit-green: 180 100% 25%; /* #008080 - Recruit section */
+    
+    /* Support Colors */
+    --warm-white: 0 0% 100%; /* #FFFFFF */
+    --light-gray: 0 0% 96%; /* #F5F5F5 */
+    --main-text: 0 0% 20%; /* #333333 */
+    --sub-text: 0 0% 45%; /* #737373 */
+    --wood-dark: 25 25% 15%; /* Dark wood background */
+    
+    
+    /* Base theme colors using treasure.inc inspired palette */
+    --background: var(--warm-white);
+    --foreground: var(--main-text);
+    --card: var(--warm-white);
+    --card-foreground: var(--main-text);
+    --popover: var(--warm-white);
+    --popover-foreground: var(--main-text);
+    --primary: var(--treasure-orange);
+    --primary-foreground: var(--warm-white);
+    --secondary: var(--light-gray);
+    --secondary-foreground: var(--main-text);
+    --muted: var(--light-gray);
+    --muted-foreground: var(--sub-text);
+    --accent: var(--treasure-orange);
+    --accent-foreground: var(--warm-white);
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: var(--warm-white);
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: var(--treasure-orange);
+    --radius: 0.75rem;
+    
+    /* Sidebar colors */
+    --sidebar-background: var(--light-gray);
+    --sidebar-foreground: var(--main-text);
+    --sidebar-primary: var(--treasure-orange);
+    --sidebar-primary-foreground: var(--warm-white);
+    --sidebar-accent: var(--warm-white);
+    --sidebar-accent-foreground: var(--main-text);
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: var(--treasure-orange);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Noto Sans JP', 'Inter', sans-serif;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  /* Treasure.inc inspired design components */
+  .treasure-orange-bg {
+    background: hsl(var(--treasure-orange));
+  }
+  
+  .company-red-bg {
+    background: hsl(var(--company-red));
+  }
+  
+  .business-blue-bg {
+    background: hsl(var(--business-blue));
+  }
+  
+  .recruit-green-bg {
+    background: hsl(var(--recruit-green));
+  }
+  
+  .wood-dark-bg {
+    background: hsl(var(--wood-dark));
+  }
+  
+  .text-treasure {
+    color: hsl(var(--treasure-orange));
+  }
+  
+  .gradient-subtle {
+    background: linear-gradient(180deg, hsl(var(--warm-white)), hsl(var(--light-gray)));
+  }
+  
+  /* Glow effects for light particles */
+  .glow-effect {
+    box-shadow: 0 0 40px hsl(var(--radiant-blue) / 0.3);
+  }
+  
+  .purple-glow {
+    box-shadow: 0 0 40px hsl(var(--neon-purple) / 0.3);
+  }
+  
+  .elegant-shadow {
+    box-shadow: 0 10px 30px -10px hsl(var(--radiant-blue) / 0.2);
+  }
+  
+  /* Light particles background animation */
+  .particles-bg {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .particles-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, hsl(var(--radiant-blue) / 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, hsl(var(--neon-purple) / 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, hsl(var(--radiant-blue) / 0.05) 0%, transparent 50%);
+    animation: float 6s ease-in-out infinite;
+    pointer-events: none;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+  }
+  
+  /* Arrow line animation for Radiant Arrow brand */
+  .arrow-line {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .arrow-line::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(135deg, hsl(var(--neon-purple)), hsl(var(--purple-blue)));
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: left;
+    animation: arrow-extend 2s ease-out infinite;
+  }
+  
+  @keyframes arrow-extend {
+    0% { transform: translateY(-50%) scaleX(0); }
+    50% { transform: translateY(-50%) scaleX(1); }
+    100% { transform: translateY(-50%) scaleX(0); }
+  }
+  
+  /* Count up animation for statistics */
+  @keyframes countUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .count-up {
+    animation: countUp 0.8s ease-out forwards;
+  }
+  
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .transition-bounce {
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-smooth hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .card-hover:hover {
+    box-shadow: 0 10px 30px -10px hsl(var(--radiant-blue) / 0.2);
+  }
+}
