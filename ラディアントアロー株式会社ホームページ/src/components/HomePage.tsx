@@ -257,7 +257,7 @@ const HomePage = () => {
 
             {/* Right side - Dark wood background with treasure chest */}
             <div className="wood-dark-bg flex items-center justify-center p-8 lg:p-16 relative">
-              <div className="text-center text-white space-y-6">
+              <div className="text-center text-black space-y-6">
                 {/* Treasure chest icon representation */}
                 <div className="w-32 h-32 mx-auto mb-8 relative">
                   <div className="w-full h-full treasure-orange-bg rounded-2xl flex items-center justify-center relative overflow-hidden">
@@ -298,7 +298,7 @@ const HomePage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">Keep evolving</h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            ラディアントアローは、 "技術者が時代に置いていかれない会社" でありたいと考えています。 AIやクラウドなどの新しい技術が次々と登場し、 エンジニアに求められるスキルや働き方も日々変化しています。 だからこそ私たちは、AI時代でも安心して成長できる環境をつくることを使命にしています。
+            ラディアントアローは、 "時代の変化に対応する会社" でありたいと考えています。 AIやクラウドなどの新しい技術が次々と登場し、 社会に求められるスキルや働き方も日々変化しています。 だからこそ私たちは、AI時代でも安心して成長できる環境をつくることを使命にしています。
           </p>
         </div>
       </section>
